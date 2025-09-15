@@ -38,25 +38,4 @@ This repository follows the **Salesforce Project Implementation Phases** as defi
 9. **Reporting, Dashboards & Security Review**
 10. **Final Presentation & Demo Day**
 
-Each phase’s documentation, configurations, and code are organized in their respective directories. Refer to the [**Project Phases Guide**](docs/PHASES.md) for detailed steps and artifacts.
-
 ---
-
-## **Getting Started**
-
-### **Prerequisites**
-
-- **Salesforce Developer Edition** account (free)
-- **Git** and **GitHub** (for version control and collaboration)
-- **Salesforce CLI** (for deployments)
-- **Basic understanding of Salesforce Admin and Developer concepts**
-
-### **Setup Instructions**
-
-1. **Clone this repository** to your local machine.
-2. **Log in to Salesforce** and create a Developer Edition org.
-3. **Set up your sandbox** (optional but recommended for testing).
-4. **Follow the phase-by-phase guide** in the `docs/PHASES.md` file to implement each stage of the project.
-5. **Deploy your configurations and code** using Salesforce CLI or Change Sets as you progress.
-6. **Test your solution** with sample data and user scenarios.
-7. **Prepare your demo and documentation** for the final presentation.
