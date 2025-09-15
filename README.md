@@ -60,7 +60,3 @@ Each phase’s documentation, configurations, and code are organized in their re
 5. **Deploy your configurations and code** using Salesforce CLI or Change Sets as you progress.
 6. **Test your solution** with sample data and user scenarios.
 7. **Prepare your demo and documentation** for the final presentation.
-
-### **Directory Structure**
-
-
