@@ -1,6 +1,5 @@
 # GreenCity: Community Service Request & Volunteer Management
 
-![GreenCity Logo](assets/greencity-logo.png)  
 *Connecting citizens, city staff, and volunteers for a cleaner, safer community.*
 
 ---
