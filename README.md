@@ -1,18 +1,41 @@
-# Salesforce DX Project: Next Steps
+# GreenCity: Community Service Request & Volunteer Management
 
-Now that you’ve created a Salesforce DX project, what’s next? Here are some documentation resources to get you started.
+*Connecting citizens, city staff, and volunteers for a cleaner, safer community.*
 
-## How Do You Plan to Deploy Your Changes?
+---
 
-Do you want to deploy a set of changes, or create a self-contained application? Choose a [development model](https://developer.salesforce.com/tools/vscode/en/user-guide/development-models).
+## **Project Overview**
 
-## Configure Your Salesforce DX Project
+**GreenCity** is a Salesforce-based CRM solution that empowers residents to report local service issues (such as potholes, broken streetlights, or illegal dumping), enables city staff to track and resolve these requests efficiently, and allows volunteers to sign up for community improvement activities and events.
 
-The `sfdx-project.json` file contains useful configuration information for your project. See [Salesforce DX Project Configuration](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_ws_config.htm) in the _Salesforce DX Developer Guide_ for details about this file.
+This project is designed for the **TCS Salesforce Last Mile Program** and demonstrates end-to-end Salesforce platform capabilities, from requirement analysis to deployment and reporting.
 
-## Read All About It
+---
 
-- [Salesforce Extensions Documentation](https://developer.salesforce.com/tools/vscode/)
-- [Salesforce CLI Setup Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_intro.htm)
-- [Salesforce DX Developer Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_intro.htm)
-- [Salesforce CLI Command Reference](https://developer.salesforce.com/docs/atlas.en-us.sfdx_cli_reference.meta/sfdx_cli_reference/cli_reference.htm)
+## **Key Features**
+
+- **Citizen Service Portal:** Residents submit, track, and get updates on service requests.
+- **Volunteer Management:** Volunteers register for cleanup events, track participation, and receive acknowledgments.
+- **Case Assignment & Routing:** Automated workflows assign cases to the appropriate city department for resolution.
+- **Real-time Notifications:** Automated emails and in-app alerts keep everyone informed.
+- **Dashboards & Reporting:** City managers monitor key metrics—resolution time, request volume, volunteer hours, and more.
+- **Role-based Access:** Secure access for residents, volunteers, city staff, and administrators.
+
+---
+
+## **Project Phases**
+
+This repository follows the **Salesforce Project Implementation Phases** as defined in the TCS Salesforce Last Mile Program:
+
+1. **Problem Understanding & Industry Analysis**
+2. **Org Setup & Configuration**
+3. **Data Modelling & Relationships**
+4. **Process Automation**
+5. **Apex Development & Asynchronous Processing**
+6. **User Interface Development**
+7. **Integration & External Access**
+8. **Data Management & Deployment**
+9. **Reporting, Dashboards & Security Review**
+10. **Final Presentation & Demo**
+
+---
