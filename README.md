@@ -29,13 +29,13 @@ This repository follows the **Salesforce Project Implementation Phases** as defi
 
 1. **Problem Understanding & Industry Analysis**
 2. **Org Setup & Configuration**
-3. **Data Modeling & Relationships**
-4. **Process Automation (Admin)**
-5. **Apex Programming (Developer)**
+3. **Data Modelling & Relationships**
+4. **Process Automation**
+5. **Apex Development & Asynchronous Processing**
 6. **User Interface Development**
 7. **Integration & External Access**
 8. **Data Management & Deployment**
 9. **Reporting, Dashboards & Security Review**
-10. **Final Presentation & Demo Day**
+10. **Final Presentation & Demo**
 
 ---
