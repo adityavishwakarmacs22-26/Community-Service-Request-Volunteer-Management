@@ -1,0 +1,29 @@
+<template>
+    <lightning-card title="Event Location" icon-name="utility:location">
+        <div class="slds-p-horizontal_small">
+            <div if:true={eventData}>
+                <p><strong>Event:</strong> {eventName}</p>
+                <p><strong>Location:</strong> {eventLocation}</p>
+                <div class="slds-m-top_medium">
+                    <iframe 
+                        src={mapUrl} 
+                        width="100%" 
+                        height="300" 
+                        frameborder="0" 
+                        style="border:0">
+                    </iframe>
+                </div>
+                <div class="slds-m-top_small">
+                    <lightning-button 
+                        label="Register for Event" 
+                        variant="brand" 
+                        onclick={openRegistrationModal}>
+                    </lightning-button>
+                </div>
+            </div>
+            <div if:false={eventData}>
+                <p>Loading event details...</p>
+            </div>
+        </div>
+    </lightning-card>
+</template>

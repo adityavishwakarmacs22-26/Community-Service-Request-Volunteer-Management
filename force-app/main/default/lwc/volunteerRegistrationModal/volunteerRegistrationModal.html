@@ -1,0 +1,60 @@
+<template>
+    <lightning-card title="Quick Volunteer Registration" icon-name="utility:adduser">
+        <div class="slds-p-horizontal_small">
+            <lightning-layout multiple-rows>
+                <lightning-layout-item size="12">
+                    <lightning-combobox
+                        name="eventId"
+                        label="Select Event"
+                        value={selectedEventId}
+                        options={eventOptions}
+                        onchange={handleEventChange}
+                        required>
+                    </lightning-combobox>
+                </lightning-layout-item>
+                
+                <lightning-layout-item size="12" class="slds-m-top_small">
+                    <lightning-input
+                        type="text"
+                        name="participantName"
+                        label="Your Name"
+                        value={participantName}
+                        onchange={handleInputChange}
+                        required>
+                    </lightning-input>
+                </lightning-layout-item>
+                
+                <lightning-layout-item size="12" class="slds-m-top_small">
+                    <lightning-input
+                        type="email"
+                        name="participantEmail"
+                        label="Email Address"
+                        value={participantEmail}
+                        onchange={handleInputChange}
+                        required>
+                    </lightning-input>
+                </lightning-layout-item>
+                
+                <lightning-layout-item size="12" class="slds-m-top_medium">
+                    <div class="slds-align_absolute-center">
+                        <lightning-button
+                            label="Cancel"
+                            onclick={handleCancel}
+                            class="slds-m-right_small">
+                        </lightning-button>
+                        <lightning-button
+                            label="Register"
+                            variant="brand"
+                            onclick={handleRegister}
+                            disabled={isRegistering}>
+                        </lightning-button>
+                    </div>
+                </lightning-layout-item>
+            </lightning-layout>
+            
+            <div if:true={showSpinner} class="slds-is-relative slds-m-top_medium">
+                <lightning-spinner alternative-text="Registering..."></lightning-spinner>
+            </div>
+        </div>
+    </lightning-card>
+</template>
