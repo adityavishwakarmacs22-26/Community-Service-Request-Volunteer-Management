@@ -2,31 +2,25 @@ public with sharing class VolunteerRegistrationController {
     
     @AuraEnabled(cacheable=true)
     public static List<Volunteer_Event__c> getAvailableEvents() {
-        try {
-            List<Volunteer_Event__c> events = Database.query(
-                'SELECT Id, Event_Name__c, Event_Date__c, Event_Location__c, ' +
-                'Max_Volunteers__c, Current_Volunteers__c FROM Volunteer_Event__c ' +
-                'WHERE Status__c = \'Approved\' AND Event_Date__c >= TODAY AND ' +
-                '(Current_Volunteers__c < Max_Volunteers__c OR Max_Volunteers__c = null) ' +
-                'ORDER BY Event_Date__c ASC LIMIT 50'
-            );
-            return events;
-        } catch (Exception e) {
-            throw new AuraHandledException('Unable to fetch events: ' + e.getMessage());
-        }
+        String volunteerEvent = 'SELECT Id, Event_Name__c FROM Volunteer_Event__c ' +
+                                'WHERE Event_Status__c = \'Approved\' ' +
+                                'AND Event_Date__c >= TODAY ' +
+                                'AND (Current_Volunteers__c < Max_Volunteers__c OR Max_Volunteers__c = null) ' +
+                                'ORDER BY Event_Date__c ASC ' +
+                                'LIMIT 50';
+        return (List<Volunteer_Event__c>) Database.query(volunteerEvent);
     }
-    
+
     @AuraEnabled
     public static Id registerVolunteer(Id eventId, String participantName) {
         try {
             // Check if already registered
-            List<Volunteer_Participation__c> existingParticipation = Database.query(
-                'SELECT Id FROM Volunteer_Participation__c ' +
-                'WHERE Event__c = :eventId ' +
-                'LIMIT 1 '
-            );
+            String existingParticipation = 'SELECT Id FROM Volunteer_Participation__c ' +
+                                           'WHERE Event__c = :eventId ' +
+                                           'LIMIT 1';
+            List<Volunteer_Participation__c> existingRecords = Database.query(existingParticipation);
             
-            if (!existingParticipation.isEmpty()) {
+            if (!existingRecords.isEmpty()) {
                 throw new AuraHandledException('You are already registered for this event.');
             }
             
